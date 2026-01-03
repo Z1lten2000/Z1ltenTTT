@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн крестики-нолики с братом</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-gamepad"></i> Крестики-Нолики онлайн</h1>
+            <p class="subtitle">Играйте с братом или другом - просто откройте одну ссылку!</p>
+        </header>
+
+        <div class="game-container">
+            <div class="game-info">
+                <div class="player-info">
+                    <div class="player current" id="player-x">
+                        <div class="player-icon">X</div>
+                        <div class="player-name">Игрок X</div>
+                        <div class="player-status">Ходит сейчас</div>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="player" id="player-o">
+                        <div class="player-icon">O</div>
+                        <div class="player-name">Игрок O</div>
+                        <div class="player-status">Ожидает хода</div>
+                    </div>
+                </div>
+                
+                <div class="status" id="game-status">
+                    Ход игрока <span class="current-player">X</span>
+                </div>
+                
+                <div class="controls">
+                    <button id="new-game" class="btn">
+                        <i class="fas fa-redo"></i> Новая игра
+                    </button>
+                    <button id="change-sides" class="btn secondary">
+                        <i class="fas fa-exchange-alt"></i> Поменяться сторонами
+                    </button>
+                </div>
+                
+                <div class="instructions">
+                    <h3><i class="fas fa-info-circle"></i> Как играть:</h3>
+                    <ul>
+                        <li>Откройте эту страницу на двух устройствах (или в двух окнах)</li>
+                        <li>Игрок X ходит первым, затем игрок O</li>
+                        <li>Победитель - первый, кто соберет линию из 3 своих символов</li>
+                        <li>Чтобы начать заново - нажмите "Новая игра"</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="game-board">
+                <div class="board" id="game-board">
+                    <!-- Ячейки будут созданы в JavaScript -->
+                </div>
+                
+                <div class="score-board">
+                    <div class="score">
+                        <div class="score-title">X Победы:</div>
+                        <div class="score-value" id="score-x">0</div>
+                    </div>
+                    <div class="score">
+                        <div class="score-title">Ничьи:</div>
+                        <div class="score-value" id="score-draw">0</div>
+                    </div>
+                    <div class="score">
+                        <div class="score-title">O Победы:</div>
+                        <div class="score-value" id="score-o">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="connection-info">
+            <p><i class="fas fa-link"></i> <strong>Совместная игра:</strong> Отправьте эту ссылку брату или другу, чтобы играть вместе. Игровое состояние сохраняется автоматически!</p>
+        </div>
+        
+        <footer>
+            <p>Создано для игры с братом | 
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub Pages</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
